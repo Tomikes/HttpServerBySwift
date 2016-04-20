@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="z6m-lc-6Th">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Root View Controller-->
+        <scene sceneID="pXF-wQ-Qo0">
+            <objects>
+                <tableViewController id="hLC-6g-1l1" customClass="ViewController" customModule="SwiftAppClient" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="1mW-yJ-VMA">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="hLC-6g-1l1" id="wwK-gQ-Zke"/>
+                            <outlet property="delegate" destination="hLC-6g-1l1" id="nlx-76-U86"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="d7Z-dF-r47"/>
+                    <connections>
+                        <segue destination="Ihn-0M-sDw" kind="show" identifier="SimpleGet" id="dp9-y8-KLm"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xlt-gl-wky" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="784" y="259"/>
+        </scene>
+        <!--SimpleGet-->
+        <scene sceneID="2ah-UJ-5DK">
+            <objects>
+                <viewController title="SimpleGet" id="Ihn-0M-sDw" customClass="SimpleGetViewController" customModule="SwiftAppClient" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cuG-i0-F1K"/>
+                        <viewControllerLayoutGuide type="bottom" id="1CO-mP-NZ6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kVc-5z-sHK">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RGm-sM-zAR">
+                                <rect key="frame" x="285" y="110" width="30" height="30"/>
+                                <state key="normal" title="GET"/>
+                                <connections>
+                                    <action selector="simpleGet:" destination="Ihn-0M-sDw" eventType="touchUpInside" id="Igh-N4-eWc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="RGm-sM-zAR" firstAttribute="centerX" secondItem="kVc-5z-sHK" secondAttribute="centerX" id="jkN-DR-AAq"/>
+                            <constraint firstItem="RGm-sM-zAR" firstAttribute="top" secondItem="cuG-i0-F1K" secondAttribute="bottom" constant="46" id="qPK-pL-n7w"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="evq-K8-tb4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1504" y="253"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="RBY-6c-maH">
+            <objects>
+                <navigationController id="z6m-lc-6Th" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xqz-F4-Cf9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="hLC-6g-1l1" kind="relationship" relationship="rootViewController" id="9bo-Hw-uki"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WlP-xK-bdL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-36" y="259"/>
+        </scene>
+    </scenes>
+</document>
