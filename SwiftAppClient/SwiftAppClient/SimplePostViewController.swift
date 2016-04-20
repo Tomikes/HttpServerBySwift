@@ -1,15 +1,15 @@
 //
-//  SimpleGetViewController.swift
+//  SimplePostViewController.swift
 //  SwiftAppClient
 //
 //  Created by Vaith on 16/4/20.
 //  Copyright © 2016年 Shenme Studio. All rights reserved.
 //
 
-import Alamofire
 import UIKit
+import Alamofire
 
-class SimpleGetViewController: UIViewController {
+class SimplePostViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,21 +22,19 @@ class SimpleGetViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBOutlet weak var resultLabel: UILabel!
-    @IBAction func simpleGet(sender: AnyObject) {
-        Alamofire.request(.GET, "http://192.168.1.66:8080/SimpleGet").responseJSON { response in
-            if(response.result.isSuccess)
+
+    @IBAction func simplePost(sender: AnyObject) {
+        Alamofire.request(.POST, "http://192.168.1.66:8080/post").responseJSON { response in
+            if (response.result.isSuccess)
             {
-                let json = response.result.value;
-                self.resultLabel.text = "success:\n\(json!["info"])";
+                print(response.result.value);
             }
             else
             {
-                self.resultLabel.text = "failure";
+                print("failure");
             }
-        };
+        }
     }
-
     /*
     // MARK: - Navigation
 

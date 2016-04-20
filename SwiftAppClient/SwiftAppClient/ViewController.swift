@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UITableViewController {
 
-    var data:NSArray = ["SimpleGet"]
+    var data:NSArray = ["SimpleGet","SimplePost"]
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

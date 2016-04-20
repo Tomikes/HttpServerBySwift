@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0C1A5C282D9CFB1D1202859F /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B281BBB42D561E6B4894AA9 /* Pods.framework */; };
 		CC999E4A1CC7349200BABCE9 /* SimpleGetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC999E491CC7349100BABCE9 /* SimpleGetViewController.swift */; };
+		CCB57B701CC7756F00DC1822 /* SimplePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB57B6F1CC7756F00DC1822 /* SimplePostViewController.swift */; };
 		CCF9CD6F1CC72DC100C29536 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF9CD6E1CC72DC100C29536 /* AppDelegate.swift */; };
 		CCF9CD711CC72DC100C29536 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF9CD701CC72DC100C29536 /* ViewController.swift */; };
 		CCF9CD741CC72DC100C29536 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCF9CD721CC72DC100C29536 /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 		8B281BBB42D561E6B4894AA9 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F95247933D0A0574815CB0F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		CC999E491CC7349100BABCE9 /* SimpleGetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleGetViewController.swift; sourceTree = "<group>"; };
+		CCB57B6F1CC7756F00DC1822 /* SimplePostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimplePostViewController.swift; sourceTree = "<group>"; };
 		CCF9CD6B1CC72DC100C29536 /* SwiftAppClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftAppClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCF9CD6E1CC72DC100C29536 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CCF9CD701CC72DC100C29536 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				CCF9CD771CC72DC100C29536 /* LaunchScreen.storyboard */,
 				CCF9CD7A1CC72DC100C29536 /* Info.plist */,
 				CC999E491CC7349100BABCE9 /* SimpleGetViewController.swift */,
+				CCB57B6F1CC7756F00DC1822 /* SimplePostViewController.swift */,
 			);
 			path = SwiftAppClient;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCB57B701CC7756F00DC1822 /* SimplePostViewController.swift in Sources */,
 				CCF9CD711CC72DC100C29536 /* ViewController.swift in Sources */,
 				CCF9CD6F1CC72DC100C29536 /* AppDelegate.swift in Sources */,
 				CC999E4A1CC7349200BABCE9 /* SimpleGetViewController.swift in Sources */,

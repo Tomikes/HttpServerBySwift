@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="z6m-lc-6Th">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10115" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="z6m-lc-6Th">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10084"/>
     </dependencies>
     <scenes>
         <!--Root View Controller-->
@@ -21,6 +21,7 @@
                     <navigationItem key="navigationItem" title="Root View Controller" id="d7Z-dF-r47"/>
                     <connections>
                         <segue destination="Ihn-0M-sDw" kind="show" identifier="SimpleGet" id="dp9-y8-KLm"/>
+                        <segue destination="ygo-D9-hxd" kind="show" identifier="SimplePost" id="ejg-3d-6ug"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xlt-gl-wky" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -46,17 +47,59 @@
                                     <action selector="simpleGet:" destination="Ihn-0M-sDw" eventType="touchUpInside" id="Igh-N4-eWc"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6C0-ph-eLy">
+                                <rect key="frame" x="279" y="290" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="6C0-ph-eLy" firstAttribute="centerY" secondItem="kVc-5z-sHK" secondAttribute="centerY" id="5tc-6I-Xth"/>
                             <constraint firstItem="RGm-sM-zAR" firstAttribute="centerX" secondItem="kVc-5z-sHK" secondAttribute="centerX" id="jkN-DR-AAq"/>
                             <constraint firstItem="RGm-sM-zAR" firstAttribute="top" secondItem="cuG-i0-F1K" secondAttribute="bottom" constant="46" id="qPK-pL-n7w"/>
+                            <constraint firstItem="6C0-ph-eLy" firstAttribute="centerX" secondItem="kVc-5z-sHK" secondAttribute="centerX" id="tHu-P2-m9h"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="resultLabel" destination="6C0-ph-eLy" id="vEg-Mi-pBs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="evq-K8-tb4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1504" y="253"/>
+            <point key="canvasLocation" x="1544" y="-403"/>
+        </scene>
+        <!--Simple Post View Controller-->
+        <scene sceneID="c3G-RT-EL9">
+            <objects>
+                <viewController id="ygo-D9-hxd" customClass="SimplePostViewController" customModule="SwiftAppClient" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="s4U-mw-Py4"/>
+                        <viewControllerLayoutGuide type="bottom" id="zcZ-9s-Exg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Us4-sm-JQe">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9n3-tu-wNz">
+                                <rect key="frame" x="285" y="125" width="31" height="30"/>
+                                <state key="normal" title="Post"/>
+                                <connections>
+                                    <action selector="simplePost:" destination="ygo-D9-hxd" eventType="touchUpInside" id="JCA-Jr-ztS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9n3-tu-wNz" firstAttribute="top" secondItem="s4U-mw-Py4" secondAttribute="bottom" constant="61" id="OHe-wc-eBa"/>
+                            <constraint firstItem="9n3-tu-wNz" firstAttribute="centerX" secondItem="Us4-sm-JQe" secondAttribute="centerX" id="WyW-gY-dCS"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uaI-v3-qnf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1539" y="313"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="RBY-6c-maH">

@@ -18,5 +18,14 @@ app.get("SimpleGet") { (Request) -> ResponseRepresentable in
     return Json(["info":"hello, this is a simple get"]);
 }
 
+app.post("SimplePost") { (Request) -> ResponseRepresentable in
+    return Json(["info":"hello, this is a simple post"]);
+}
+
+app.post("post") { (Request) -> ResponseRepresentable in
+    return Json(["info":"hello, this is a simple post"]);
+}
+
+
 print("Visit http://localhost:8080")
 app.start(port: 8080);
